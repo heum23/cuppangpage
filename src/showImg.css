@@ -1,0 +1,10 @@
+.showImg {
+  display: flex;
+  gap: 5px;
+}
+.miniImg img {
+  border: 2px solid white;
+}
+.miniImg img:hover {
+  border: 2px solid blue; /* 🔥 호버 시 파란색 테두리 */
+}

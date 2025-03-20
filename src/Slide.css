@@ -1,0 +1,44 @@
+.slider-container {
+  width: 80%;
+  margin: auto;
+}
+
+.slide-item {
+  background: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+.slick-prev,
+.slick-next {
+  display: block !important;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  background-color: transparent !important; /* 배경을 투명하게 */
+  border-radius: 50%;
+  opacity: 1 !important; /* 버튼이 사라지지 않도록 */
+  transition: none !important; /* slick에서 자동 추가되는 효과 제거 */
+}
+
+/* 기본 버튼을 유지하면서 추가 스타일만 적용 */
+.slick-prev::before,
+.slick-next::before {
+  color: black !important; /* 기본 버튼 색 유지 */
+  font-size: 20px !important; /* 크기 조정 가능 */
+}
+
+.slick-prev {
+  left: -50px;
+}
+
+.slick-next {
+  right: -50px;
+}
+/* 처음과 끝에서 버튼 숨기기 */
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+  visibility: hidden !important; /* 버튼을 숨기지만 공간 유지 */
+  opacity: 0 !important; /* 투명도 조정 */
+  pointer-events: none !important; /* 클릭 방지 */
+}
